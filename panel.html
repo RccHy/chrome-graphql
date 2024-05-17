@@ -1,0 +1,91 @@
+<!--
+ *  Copyright (c) 2021 GraphQL Contributors
+ *  All rights reserved.
+ *
+ *  This source code is licensed under the license found in the
+ *  LICENSE file in the root directory of this source tree.
+-->
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .main {
+            flex: 1;
+            overflow-y: auto;
+        }
+        .tool{
+            flex: 1;
+        }
+
+        .graphiql {
+            flex: 2;
+        }
+        .custom-btn {
+            border-radius: 4px;
+            color: white;
+            padding: 5px 8px;
+            border: none;
+            text-align: center;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 3px;
+        }
+        .green{
+            background-color: #4CAF50;
+        }
+        .blue{
+            background-color: #2196F3;
+        }
+        .gray{
+            background-color: #607D8B;
+            color: white;
+        }
+    </style>
+
+    <script
+            crossorigin
+            src="/graphqlTool/react.development.js"
+    ></script>
+    <script
+            crossorigin
+            src="/graphqlTool/react-dom.development.js"
+    ></script>
+
+    <script
+            src="/graphqlTool/graphiql.min.js"
+            type="application/javascript"
+    ></script>
+    <link rel="stylesheet" href="/graphqlTool/graphiql.min.css"/>
+    <script src="/graphqlTool/index.umd.js" crossorigin></script>
+
+    <link rel="stylesheet" href="/graphqlTool/style.css"/>
+    <script src="graphqlTool/react.development.js"></script>
+    <script src="panel.js"></script>
+</head>
+
+
+
+<body>
+<div class="container">
+    <div id="main" class="main">
+        <div id="tool" class="tool">
+            <button id="cleanBtn" class="custom-btn gray" >CLEAN</button>
+        </div>
+        <div id="requests" >
+
+        </div>
+        <!-- HTTP请求将被动态添加到这里 -->
+    </div>
+    <div id="graphiql" class="graphiql">
+        <!-- GraphiQL 工具将被嵌入到这里 -->
+    </div>
+</div>
+</body>
+
+</html>
